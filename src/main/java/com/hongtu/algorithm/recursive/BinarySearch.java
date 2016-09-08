@@ -1,4 +1,4 @@
-package com.hongtu.algrithm.recursive;
+package com.hongtu.algorithm.recursive;
 
 /**
  * Created by hongtu_zang on 2016/8/26.
