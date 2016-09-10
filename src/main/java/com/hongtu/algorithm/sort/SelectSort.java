@@ -1,10 +1,14 @@
 package com.hongtu.algorithm.sort;
 
+import com.hongtu.algorithm.sort.common.RandomArray;
+
 /**
  * Created by lenovo on 2016/9/8.
+ *
+ * 遍历数组，保持前n位有序，一直到n=length
  */
 public class SelectSort {
-    private static int[] array = new int[] { 10,  15, 9, 20, 7, 20, 15};
+    private static int[] array;
 
     /**
      * 正向排序，从小到大
@@ -56,6 +60,8 @@ public class SelectSort {
     }
 
     public static void main(String[] args) {
-        reverseSort();
+        array = RandomArray.random(1, 100, 10);
+        printArray();
+        sort();
     }
 }

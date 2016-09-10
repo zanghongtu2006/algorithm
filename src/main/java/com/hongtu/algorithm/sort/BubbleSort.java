@@ -1,12 +1,15 @@
 package com.hongtu.algorithm.sort;
 
+import com.hongtu.algorithm.sort.common.RandomArray;
+
 import java.util.Arrays;
+import java.util.Random;
 
 /**
  * Created by hongtu_zang on 2016/9/1.
  */
 public class BubbleSort {
-    private static int[] array = new int[] { 10,  15, 9, 20, 7, 20, 15};
+    private static int[] array;
 
     /**
      * 正向排序，从小到大
@@ -30,7 +33,6 @@ public class BubbleSort {
             for(int j = i; j > 0; j--) {
                 if(array[j] > array[j - 1]) {
                     exchange(j - 1);
-                    printArray();
                 }
             }
         }
@@ -50,8 +52,10 @@ public class BubbleSort {
         array[i + 1] = tmp;
     }
 
-    public static void main() {
-        reverseSort();
+    public static void main(String[] args) {
+        array = RandomArray.random(1, 100, 10);
+        printArray();
+        sort();
     }
 
 }
