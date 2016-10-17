@@ -17,7 +17,7 @@ public class String2Integer {
         if(str.length() == 0) {
             return 0;
         }
-        int result = 0;
+        long result = 0;
         int negative = 1;
         boolean beginNumber = false;
         for(int i = 0; i < str.length(); i++) {
@@ -31,18 +31,18 @@ public class String2Integer {
                 negative = -1;
             } else if( c > 47 && c < 58) {
                 beginNumber = true;
-                if(negative == 1 && (result > 214748365 ||((result * 10) >= 2147483640 && c > 55) || (result * 10) < 0)) {
+                result = (result * 10) + (c - 48);
+                if(negative == 1 && result > 2147483647) {
                     return Integer.MAX_VALUE;
-                } else if(negative == -1 && (result > 214748365 ||((result * 10) >= 2147483640 && c > 56) || (result * 10) < 0)) {
+                } else if(negative == -1 && result > 2147483648L) {
                     return Integer.MIN_VALUE;
                 }
-                result = (result * 10) + (c - 48);
             } else {
-                return result * negative;
+                return (int)result * negative;
             }
 
         }
-        return result * negative;
+        return (int)result * negative;
     }
 
     public static void main(String[] args) {
