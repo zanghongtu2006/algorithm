@@ -10,6 +10,7 @@ import java.util.List;
  * Example2: x = -123, return -321
  */
 public class ReverseInteger {
+
     public int reverse(int x) {
         List<Integer> list = new ArrayList<Integer>();
         Boolean negative = false;
@@ -22,24 +23,22 @@ public class ReverseInteger {
             return 0;
         }
         //parse number into a list
+        int result = 0;
         while (x >= 10) {
-            list.add(x % 10);
-            x = x / 10;
-        }
-        list.add(x);
-        Integer result = 0;
-        for(int i = 0; i < list.size(); i++) {
-            result = (result * 10) + list.get(i);
-            if (result > (Integer.MAX_VALUE/10) && i < (list.size() - 1)) {
+            int tmp = x % 10;
+            result = (result * 10) + tmp;
+            if (result > (Integer.MAX_VALUE/10)) {
                 //if result will overflow, retun 0
                 return 0;
             }
+            x = x / 10;
         }
+        result = (result * 10) + x;
         return result * (negative?-1:1);
     }
 
     public static void main(String[] args) {
         ReverseInteger reverseInteger = new ReverseInteger();
-        System.out.print(reverseInteger.reverse(-2147483648));
+        System.out.println(reverseInteger.reverse(123234324));
     }
 }
