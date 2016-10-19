@@ -17,18 +17,7 @@ package com.hongtu.leetcode;
 public class NimGame {
 
     public boolean canWinNim(int n) {
-        boolean result = true;
-        if(n < 4) {
-            result = true;
-        }
-        if(n == 4) {
-            result = false;
-        }
-        if(n - 3 > 3) {
-            boolean can = canWinNim(n - 3);
-            result = result?!can:can;
-        }
-        return result;
+        return (n & 3) > 0;
     }
 
     public static void main(String[] args) {
