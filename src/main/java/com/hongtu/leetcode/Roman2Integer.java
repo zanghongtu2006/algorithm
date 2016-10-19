@@ -5,6 +5,8 @@ import java.util.Map;
 
 /**
  * Created by hongtu on 2016/10/18.
+ * Given a roman numeral, convert it to an integer.
+ * Input is guaranteed to be within the range from 1 to 3999.
  */
 public class Roman2Integer {
     public int romanToInt(String s) {
