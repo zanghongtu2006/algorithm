@@ -1,4 +1,4 @@
-package com.hongtu.leetcode;
+package com.hongtu.leetcode.easy;
 
 /**
  * Created by hongtu on 16-10-21.

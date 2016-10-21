@@ -1,4 +1,4 @@
-package com.hongtu.leetcode.mergetowsortedlist;
+package com.hongtu.leetcode.easy.mergetowsortedlist;
 
 /**
  * Created by hongtu on 16-10-20.

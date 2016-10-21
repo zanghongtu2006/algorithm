@@ -1,4 +1,4 @@
-package com.hongtu.leetcode;
+package com.hongtu.leetcode.easy;
 
 import java.util.ArrayList;
 import java.util.List;

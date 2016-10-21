@@ -1,4 +1,4 @@
-package com.hongtu.leetcode.maxdeptofbinarytree;
+package com.hongtu.leetcode.easy.maxdeptofbinarytree;
 
 /**
  * Created by hongtu on 16-10-21.
